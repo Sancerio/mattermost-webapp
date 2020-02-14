@@ -298,7 +298,7 @@ class Post extends React.PureComponent {
 
     render() {
         const {post} = this.props;
-        if (!post.id) {
+        if (!post.id || post.state === Posts.POST_DELETED) {
             return null;
         }
 
